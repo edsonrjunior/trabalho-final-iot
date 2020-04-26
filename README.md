@@ -38,17 +38,23 @@ O cálculo é realizado em valores de PPM (Partes Por Milhão) e enviados à um 
 
 3. Após a conexão ao WiFi e calibrangem feita, basta acessar o no navegador o endereço `http://192.168.0.110` nesse momento será feito uma requisição HTTP get que enviará os valores em PPM de gás, CO2 e fumaça que o sensor está capturando.
 
-![Pagina HTML](pagina_htmlx.png)
+![Pagina HTML](pagina_html.png)
 
 4. Ao clicar em `ATUALIZAR`, o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página.
 
-![Atualização da página ](atualizacao_da_pagina.png)
+![Atualização da página web](name-of-giphy.gif)
 
 
 5. Ao detectar um dos elementos (gás, CO2 ou fumaça), o alarme e o FAN serão ativados. Para exibir na página HTTP é necessário fazer uma nova requisição.
 
 
-Vídeo demonstrativo: Https://
+
+
+
+
+## Vídeo demonstrativo no YouTube
+https://youtu.be/YjLFQFsbTY4
+
 
 ## Equipe
 | Nome | Matrícula |

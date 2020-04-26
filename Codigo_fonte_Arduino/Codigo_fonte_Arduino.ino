@@ -52,6 +52,9 @@ const int wifiLedGreen = 8;
 const int alarme = 10;
 const int rele = 6;
 
+int statusFan = 0;
+int statusAlarme = 0;
+
 void setup() {
   Serial.begin(9600);
 
@@ -78,14 +81,18 @@ void loop() {
 
   exibirNoDisplay();
 
-  if (iPPM_LPG > 0) {
+  if (iPPM_Smoke > 0 || iPPM_LPG > 0  || iPPM_CO > 0) {
     digitalWrite(rele, HIGH);
+    statusFan = 1;
+    statusAlarme = 1;
     tone(alarme, 1000);
     delay(1000);
     noTone(alarme);
     delay(1000);
   } else {
     digitalWrite(rele, LOW);
+    statusFan = 0;
+    statusAlarme = 0;
   }
 
 
@@ -150,7 +157,7 @@ void sendHttpResponse(WiFiEspClient client) {
   client.print("Status do FAN");
 
   //Status da fan
-  if (rele == HIGH) {
+  if (statusFan == 1) {
     client.print("<p style='line-height:2'><font color='green'>LIGADO</font></p>\r\n"); //ESCREVE "LIGADO" NA PÁGINA
   } else {
     client.print("<p style='line-height:2'><font color='red'>DESLIGADO</font></p>\r\n"); //ESCREVE "DESLIGADO" NA PÁGINA)
@@ -159,7 +166,7 @@ void sendHttpResponse(WiFiEspClient client) {
   client.print("Status do Alarme");
 
   //Status do Alarme
-  if (alarme == HIGH) {
+  if (statusAlarme == 1) {
     client.print("<p style='line-height:2'><font color='green'>LIGADO</font></p>\r\n"); //ESCREVE "LIGADO" NA PÁGINA
   } else {
     client.print("<p style='line-height:2'><font color='red'>DESLIGADO</font></p>\r\n"); //ESCREVE "DESLIGADO" NA PÁGINA)
@@ -301,26 +308,4 @@ void exibirNoDisplay() {
   lcd.print("Smoke: ");
   lcd.print(iPPM_Smoke);
   lcd.print(" ppm");
-}
-
-
-//Soar alarme
-void soarAlarme() {
-  unsigned char i;
-  while (1) {
-    //Frequência 1
-    for (i = 0; i < 80; i++) {
-      digitalWrite (alarme, HIGH) ;
-      delay (1) ;
-      digitalWrite (alarme, LOW) ;
-      delay (1) ;
-    }
-    //Frequência 2
-    for (i = 0; i < 100; i++)    {
-      digitalWrite (alarme, HIGH) ;
-      delay (2) ;
-      digitalWrite (alarme, LOW) ;
-      delay (2) ;
-    }
-  }
 }
