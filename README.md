@@ -40,7 +40,7 @@ O cálculo é realizado em valores de PPM (Partes Por Milhão) e enviados à um 
 
 ![Pagina HTML](pagina_html.png)
 
-4. Ao clicar em `ATUALIZAR`, o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página. Na imagem abaixo é exibida as tags html que forma a página.
+4. Ao clicar em `ATUALIZAR`, o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página. Na imagem abaixo é exibida as tags html que formam a página.
 
 ![Atualização da página web](atualizacao-da-pagina.png)
 
