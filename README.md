@@ -2,7 +2,9 @@
 
 ## Introdução
 
-O projeto consiste em utilizar um micro controlador Arduino UNO e um sensor de gás, fumaça e CO2 para detectar esses elememtos no ar, calcular seus valores em partes por milhão (PPM) e utilizando um webservice, enviar os valores detectados à uma pagina HTML simples.
+Este projeto consiste na utilização de um controlador Arduíno UNO, equipado com um sensor de gás (entre eles fumaça e CO2), para o auxílio na prevenção de acidentes que tenham como causa incêndio, vazamento de elementos tóxicos num ambiente controlado.
+
+O cálculo é realizado em valores de PPM (Partes Por Milhão) e enviados à um webservice, que realiza a manipulação das informações. Neste estudo de caso, as informações são exibidas num dashboard.
 
 ## Componentes utilizados
 1. Arduino Uno
@@ -18,7 +20,7 @@ O projeto consiste em utilizar um micro controlador Arduino UNO e um sensor de g
 11. 1 FAN de computador de 12V
 12. Fonte de alimentação externa de 12V
 
-## Esquema
+## Arquitetura da Solução
 
 ![Esquema](esquema.png)
 
