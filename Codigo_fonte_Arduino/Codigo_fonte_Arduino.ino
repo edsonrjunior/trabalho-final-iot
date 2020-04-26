@@ -165,12 +165,12 @@ void sendHttpResponse(WiFiEspClient client) {
     client.print("<p style='line-height:2'><font color='red'>DESLIGADO</font></p>\r\n"); //ESCREVE "DESLIGADO" NA PÁGINA)
   }
 
-  client.print("<a href=\"/A\">Atualizar</a>\r\n")
+  client.print("<a href=\"/A\">Atualizar</a>\r\n");
 
   client.print("</main>\r\n");
 
   client.print("<footer>\r\n");
-  client.print("<p>O código do projeto você encontra em: https://github.com/edsonrjunior/trabalho-iot</p>\r\n");
+  client.print("<p>FIAP 34SCJ GRUPO G1</p>\r\n");
   client.print("</footer>");
 
   client.print("</body>\r\n");

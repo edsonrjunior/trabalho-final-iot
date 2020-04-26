@@ -38,12 +38,20 @@ O projeto consiste em utilizar um micro controlador Arduino UNO e um sensor de g
 
 ![Pagina HTML](pagina_html.png)
 
-4. Ao detectar um dos elementos (gás, CO2 ou fumaça), o alarme e o FAN serão ativados. Para exibir na página HTTP é necessário fazer uma nova requisição.
+4. Ao clicar `ATUALIZAR` o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página.
+![Atualização da página ](atualizacao_da_pagina.png)
 
+
+5. Ao detectar um dos elementos (gás, CO2 ou fumaça), o alarme e o FAN serão ativados. Para exibir na página HTTP é necessário fazer uma nova requisição.
+
+
+Vídeo demonstrativo: Https://
 
 ## Equipe
-Ana Carla Brasil
-Edson Raimundo Júnior
-Hugo Ohnishi Destito
-Richel Sensineli
+| Nome | Matrícula |
+| ------ | ------ |
+| Ana Carla Brasil   | 334056 |
+| Edson Raimundo Jr. | 333819 |
+| Hugo Destito       | 333823 |
+| Richel Sensineli   | 333805 |
 
