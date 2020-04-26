@@ -16,7 +16,7 @@ O projeto consiste em utilizar um micro controlador Arduino UNO e um sensor de g
 9. 1 módulo buzzer
 10. 2 resistores de 150 omhs
 11. 1 FAN de computador de 12V
-12. Fonte alimentação externa de 12V
+12. Fonte de alimentação externa de 12V
 
 ## Esquema
 
@@ -36,9 +36,10 @@ O projeto consiste em utilizar um micro controlador Arduino UNO e um sensor de g
 
 3. Após a conexão ao WiFi e calibrangem feita, basta acessar o no navegador o endereço `http://192.168.0.110` nesse momento será feito uma requisição HTTP get que enviará os valores em PPM de gás, CO2 e fumaça que o sensor está capturando.
 
-![Pagina HTML](pagina_html.png)
+![Pagina HTML](pagina_htmlx.png)
 
-4. Ao clicar `ATUALIZAR` o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página.
+4. Ao clicar em `ATUALIZAR`, o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página.
+
 ![Atualização da página ](atualizacao_da_pagina.png)
 
 
