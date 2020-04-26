@@ -40,9 +40,9 @@ O cálculo é realizado em valores de PPM (Partes Por Milhão) e enviados à um 
 
 ![Pagina HTML](pagina_html.png)
 
-4. Ao clicar em `ATUALIZAR`, o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página.
+4. Ao clicar em `ATUALIZAR`, o Shield WiFi ESP8266 envia um requisição GET http para atualizar a página. Na imagem abaixo é exibida as tags html que forma a página.
 
-![Atualização da página web](name-of-giphy.gif)
+![Atualização da página web](atualizacao-da-pagina.png)
 
 
 5. Ao detectar um dos elementos (gás, CO2 ou fumaça), o alarme e o FAN serão ativados. Para exibir na página HTTP é necessário fazer uma nova requisição.
